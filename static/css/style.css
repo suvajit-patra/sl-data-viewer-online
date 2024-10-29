@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+.settings {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.video-details, .video-section {
+    padding: 10px;
+    width: 45%;
+}
+
+.controls button {
+    margin: 5px;
+}
+
+.video-section video {
+    width: 500px;
+    object-fit: cover;
+}

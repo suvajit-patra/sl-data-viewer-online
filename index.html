@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Data Analysis Tool</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Data Analysis Tool</h1>
+        <div class="settings">
+            <label>Metadata <input type="text" id="metadata" /></label>
+            <label>Root path <input type="text" id="root-path" /></label>
+            <button onclick="loadMetadata()">Load</button>
+        </div>
+
+        <div class="search-box">
+            <input class="search-ip" type="text" Placeholder="word"/>
+            <button class="custom-btn" type="submit" value="Search" id="search-btn" onclick="searchWord()"><span>Search</span></button>
+        </div>
+        <div class="video-playlist">
+            <select class="playlist-sec1" size="10" onchange="playlistAction1();"> 
+
+            </select>
+            <select class="playlist-sec2" size="10" onchange="playlistAction2();"> 
+
+            </select> 
+        </div>
+        
+        <div class="content">
+            <div class="video-details" id="video-details">
+                <!-- Metadata will be displayed here -->
+            </div>
+            <div class="video-section">
+                <video id="video" controls></video>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="downloadVideo()">Download</button>
+            <button onclick="showVideo()">Video</button>
+            <button onclick="showKeypoints()">Keypoints</button>
+            <button onclick="toggleKeypointsOnVideo()">Keypoints on Vid</button>
+            <button onclick="toggleVideo()">Play/Pause</button>
+            <button onclick="nextFrame()">Next Frame</button>
+            <button onclick="prevFrame()">Previous Frame</button>
+            <button onclick="changeSpeed()">Speed</button>
+        </div>
+    </div>
+
+    <script src="static/js/app.js"></script>
+</body>
+</html>
