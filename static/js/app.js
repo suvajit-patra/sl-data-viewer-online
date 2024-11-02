@@ -24,7 +24,7 @@ var clicked_word = ''
 var video = []
 
 function searchWord() {
-    search_text = searched_word.value.trim().toLowerCase();
+    search_text = searchedWordElement.value.trim().toLowerCase();
     if (search_text == '') {
         searched_text = search_text;
         return
@@ -114,6 +114,7 @@ async function playlistAction2() {
         const videoBlob = await base64Response.blob()
         video = videoBlob
         videoElement.src = URL.createObjectURL(videoBlob);  // Adjust path
+        videoElement.play();
     }
 }
 
